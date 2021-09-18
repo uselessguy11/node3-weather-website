@@ -24,7 +24,7 @@ const messageTwo = document.querySelector('#message-2')
 messageOne.textContent = 'From JavaScript'
 messageTwo.textContent = ''
 
-
+console.log('dani')
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
