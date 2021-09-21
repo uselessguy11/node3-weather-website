@@ -62,7 +62,7 @@ app.get('/weather', (req,res) => {
         }
         //center[0] = latitude && center[1] = longitude
         forecast(center[0], center[1], (error,{
-            weather_descriptions:description, temperature, feelslike}) => {
+            weather_descriptions:description, temperature, feelslike,humidity,wind_speed}) => {
             if(error){
                 return res.send({error})
             }
@@ -70,7 +70,9 @@ app.get('/weather', (req,res) => {
                 location:place_name,
                 weather_descriptions:description[0],
                 temperature,
-                feelslike
+                feelslike,
+                humidity,
+                wind_speed
             })
         })
     })
